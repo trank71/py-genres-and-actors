@@ -40,6 +40,17 @@ def main() -> QuerySet:
         last_name="Johansson",
     )
 
+    Genre.objects.filter(name="Dramma").update(
+        name="Drama"
+    )
+    Actor.objects.filter(last_name="Klooney").update(
+        last_name="Clooney"
+    )
+    Actor.objects.filter(first_name="Kianu").update(
+        first_name="Keanu",
+        last_name="Reeves",
+    )
+
 
 if __name__ == "__main__":
     main()
