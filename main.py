@@ -50,6 +50,9 @@ def main() -> QuerySet:
         first_name="Keanu",
         last_name="Reeves",
     )
+    Genre.objects.filter(name="Action").delete()
+    Actor.objects.filter(first_name="Scarlett").delete()
+
 
 
 if __name__ == "__main__":
